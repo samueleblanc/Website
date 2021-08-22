@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="darkmode.css">
+        <title>Training stimulus is a number between 0 and 1</title>
+    </head>
+    <body>
+        <header>
+            <div style="display: inline-block;"><a href="website_b.html"><h4>Home</h4></a></div><span class="tab"></span><div style="display: inline-block;"><a href="stimulus_a.html"><h4>Normal</h4></a></div>
+        <h1>Training stimulus is a number between 0 and 1</h1></header>
+        <p><form method="GET" action="Articles/Training stimulus is a number between 0 and 1.pdf" target="_blank"><button type="submit">Download PDF</button></form><br>
+            <div class="white">Samuel Leblanc, 2021<br><br>
+            <div class="box"><p6><span class="comments">## Resistance training can be understood with Newtonian physics,
+                 therefore making it possible to compute its main stimulus.</span></p6></div><br><br>
+There are different approaches on how to divide training stimuli. The one that's most often used in the
+ general public is:<br>
+- Strength or Neural;<br>
+- Hypertrophy or Mechanical Stress;<br>
+- Endurance or Metabolic stress.*<br>
+Hence creating a dichotomy between three separated classes. The obvious problem in that approach is
+ limiting yourself to one stimulus, even if it is possible to work strength and hypertrophy at the 
+ same time, for example. We must apply nuance since there's a difference between doing a 1 RM 
+ (repetition maximum) and 6 RM, the first being almost exclusively for strength purposes and the
+  latter being a potential median between strength and hypertrophy, depending on many other variables.<br><br>
+<i>*I will use these terms as if they are synonyms.</i><br><br>
+<h3>Variables used</h3>
+The number of repetitions (reps) is the evident first answer. Doing more reps, independently of 
+other metrics, will slowly tilt the stimulus into the metabolic stress category. The main reason
+ being an increase in time under tension (TUT), that will most likely lead to an increase in energy
+  (glucose) demand, a reduction in oxygen availability, an increase in lactate concentration and 
+  nitric oxide production. All of which are closely linked to metabolic work. The resistance profile
+   is also an extremely important metric.† Like explained in the article linked below, if you have
+    an exercise which makes it more difficult to execute (due to an increase in power) in the part
+     of the movement where the muscle is at its weakest, the metabolic demand will rise and vise versa.
+The tempo also needs to be taken into account. The first and third number are already included 
+in the resistance profile, but not the second and last. They manifest a clear impact in the 
+training stimulus, since spending more time in the most metabolically demanding part of the 
+movement (shortened muscle)‡ will increase the metabolic demand, and spending time in the lengthened
+ position will reduce the "stretch reflex" which is an often important component of strength training.
+  The fact that the concentric part of the movement generates more power than the eccentric part (or 
+  if the opposite is true) must be included in the process of finding the main stimulus or stimuli. 
+  Since the concentric portion demands more energy than the eccentric, prioritizing the concentric, 
+  for instance, will lead to a slightly more metabolically demanding workout.<br><br>
+<i>† To read more on resistance profiles, click <a href="resistanceP_a.html" target="_blank">here</a>.<br>
+‡ Depending on the resistance profile, it might not be that part—but it often is.</i>
+<h3>The equation and the program</h3>
+A sigmoid function (shown below) was chosen, due to its property of nuance in the middle and none in the extremes. Doing 30 reps per set or 100 reps are both in the endurance world, but 8 reps could be in any category, depending on every variable.<br>
+<img src="Pictures/Training stimulus.png" alt="Sigmoid function" class="center" style="height: 45%; width: 45%; margin-top: 7px;"><br><br>
+<p6><div class="box">
+<span class="comments">## This is the python program used for every example showed below</span><br><br>
+
+<span class="function">import</span> math<br>
+<span class="function">import</span> numpy <span class="function">as</span> np<br>
+<span class="function">import</span> matplotlib.pyplot <span class="function">as</span> plt<br>
+<span class="function">from</span> matplotlib.lines <span class="function">import</span> Line2D<br>
+<span class="function">from</span> matplotlib.text <span class="function">import</span> Text<br><br>
+
+<span class="comments">## Input from the user and other variables</span><br>
+name = <span class="build">input</span>("Name of the exercise: ")<br>
+<span class="function">if</span> "preacher" <span class="function">in</span> name:<br>
+    <span class="tab">preacher = <span class="build">input</span>("Angle of the preacher bench: ")</span><br>
+<span class="function">else</span>:<br>
+<span class="tab">preacher = 0</span><br>
+tempo = <span class="build">input</span>("Tempo: ")<br>
+rom = <span class="build">input</span>("Range of motion: ")<br>
+reps = <span class="build">input</span>("Number of reps: ")<br>
+weight = 10<br>
+radius = 0.5<br><br>
+
+<span class="comments">## Resistance profile equation</span><br>
+start = <span class="build">int</span>(rom[:2])<br>
+end = <span class="build">int</span>(rom[5:])<br>
+contr = <span class="build">int</span>(tempo[3])<br>
+stre = <span class="build">int</span>(tempo[1])<br>
+maxAng = (math.<span class="build">pi</span> / 180) * end<br>
+romRad = (math.<span class="build">pi</span> / 180) * (end - start)<br>
+romDeg = <span class="build">list</span>(<span class="build">range</span>(1, ((end + <span class="build">int</span>(preacher)) - (start + <span class="build">int</span>(preacher)) + 2)))<br>
+conVel = romRad / <span class="build">int</span>(tempo[2])<br>
+eccVel = romRad / <span class="build">int</span>(tempo[0])<br>
+simPen = (2 * math.<span class="build">pi</span>) * math.<span class="build">sqrt</span>(radius / 9.8)<br>
+pendulum = simPen * (1 + ((maxAng ** 2) / 16) + ((11 / 3074) * (maxAng ** 4)))<br>
+usedAmp = 0.25 - (start / 360)<br>
+gravitVel = romRad / (pendulum * usedAmp)<br>
+usedAcc = 1 - (eccVel / gravitVel)<br>
+angle = np.<span class="build">arange</span>((start + <span class="build">int</span>(preacher)), (end + 1 + <span class="build">int</span>(preacher)), 1)<br>
+
+concentric = weight * radius * np.<span class="build">sin</span>(np.<span class="build">deg2rad</span>(angle)) * 9.8 * conVel<br>
+eccentric = weight * radius * np.<span class="build">sin</span>(np.<span class="build">deg2rad</span>(angle)) * 9.8 * usedAcc<br><br>
+
+<span class="comments">## Plot the resistance profile</span><br>
+x = <span class="build">list</span>(<span class="build">range</span>(start, (end + 1)))<br>
+p1 = plt.<span class="build">plot</span>(x, concentric, "g", label="Concentric")<br>
+p2 = plt.<span class="build">plot</span>(x, eccentric, 'b', label="Eccentric")<br>
+plt.<span class="build">legend</span>(loc="upper left")<br>
+plt.<span class="build">xlabel</span>("Angle (°)")<br>
+plt.<span class="build">ylabel</span>("Power (W)")<br>
+plt.<span class="build">title</span>(f"Resistance profile of a {name}")<br>
+plt.<span class="build">show</span>()<br><br>
+
+<span class="comments">## Make sure that there is tension before allocating value to the time spent in a position</span><br>
+
+<span class="function">if</span> stre > 0:<br>
+<span class="tab"><span class="function">if</span> (weight * radius * np.<span class="build">sin</span>(np.<span class="build">deg2rad</span>(start + <span class="build">int</span>(preacher))) * 9.8 * conVel) == 0:</span><br>
+<span class="tabP">stre = 0</span><br>
+<span class="tab"><span class="function">else</span></span>:<br>
+<span class="tabP"><span class="function">pass</span></span><br>
+<span class="function">if</span> contr > 0:<br>
+<span class="tab"><span class="function">if</span> (weight * radius * np.<span class="build">sin</span>(np.<span class="build">deg2rad</span>(end + <span class="build">int</span>(preacher))) * 9.8 * conVel) == 0:</span><br>
+<span class="tabP">contr = 0</span><br>
+<span class="tab"><span class="function">else</span>:</span><br>
+<span class="tabP"><span class="function">pass</span></span><br><br>
+
+<span class="comments">## Stimulus equation</span><br>
+<span class="function">if</span> <span class="build">max</span>(concentric) > <span class="build">max</span>(eccentric):<br>
+<span class="tab">conType = 0</span><br>
+<span class="function">else</span>:<br>
+<span class="tab">conType = -4</span><br>
+maxValue = math.<span class="build">asin</span>(<span class="build">max</span>(concentric) / (weight * radius * 9.8 * conVel)) * (180 / math.<span class="build">pi</span>)<br>
+maxIndex = (romDeg.<span class="build">index</span>(<span class="build">round</span>(maxValue)) + 1) - (start + <span class="build">int</span>(preacher))<br>
+maxTen = maxIndex / <span class="build">len</span>(x)<br>
+point = ((<span class="build">int</span>(reps) / 2) - 5)+ (-0.5 * (stre + <span class="build">int</span>(tempo[0]))) + ((contr + (conVel / 2)) / 2) + conType + (maxTen * 2)<br>
+stimulus = 1 / (1 + (math.<span class="build">e</span> ** (-1 * point)))<br><br>
+
+<span class="comments">## Results</span><br>
+fig1 = plt.<span class="build">figure</span>(facecolor='white')<br>
+ax1 = plt.<span class="build">axes</span>(frameon=False)<br>
+ax1.<span class="build">get_axis</span>().<span class="build">tick_bottom</span>()<br>
+ax1.<span class="build">axes</span>.<span class="build">get_axis</span>().<span class="build">set_visible</span>(False)<br>
+x = np.<span class="build">arange</span>(0, 2, 1)<br>
+ax1.<span class="build">scatter</span>(stimulus, 1, s=150, marker=7, color="b", label=f"Stimulus = {<span class="build">round</span>(stimulus, 4)}")<br>
+ax1.<span class="build">plot</span>(np.<span class="build">full</span>(x.<span class="build">shape</span>, 1), color="b", linewidth=2)<br>
+plt.<span class="build">legend</span>(loc="lower right")<br>
+plt.<span class="build">title</span>("Training Stimulus", fontsize=16)<br>
+xmin, xmax = ax1.<span class="build">get_xaxis</span>().<span class="build">get_view_interval</span>()<br>
+ymin, ymax = ax1.<span class="build">get_yaxis</span>().<span class="build">get_view_interval</span>()<br>
+ax1.<span class="build">add_artist</span>(Line2D((xmin, xmax), (ymin, ymin), color='black', linewidth=2))<br>
+plt.<span class="build">show</span>()</div></p6><br><br>
+<h3>Results</h3>
+Instead of naming training stimuli "strength", "hypertrophy", "glycolytic" or any other traditional way that we think about it. I chose to go down a level of abstraction since we now have the tools to do so and call a training stimulus by a number between 0 and 1. The lower the number, the closer it is to absolute strength work and the higher, the closer to absolute endurance. Muscle hypertrophy can happen at any number, but is predominant the closer it is to 0.5.<br>
+<h4>Comparing three different biceps curl</h4>
+<img src="Pictures/Stimulus biceps curl compare.png" class="center" alt="Biceps curl stimulus" style="height: 75%; width: 75%;">
+<h4>Comparing two different lateral (or deltoids) raises</h4>
+<img src="Pictures/Stimulus lateral raises compare.png" class="center" alt="Lateral raises stimulus" style="height: 50%; width: 50%;">
+<h3>Conclusion</h3>
+As of right now, the program shown above only works with single joint movement, with dumbbells or barbells while implicitly believing that, for every muscle, the increase in joint angle means shortening of the muscle.
+These challenges, and every other, could potentially be solved by changing the way we find the variables. The current input function is to be replaced.</div><br><br>
+
+        </p>
+    </body>
+</html>
