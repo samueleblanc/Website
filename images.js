@@ -2,23 +2,42 @@
 let modal = document.getElementById("myModal");
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
-let img = document.getElementById("myImg1");
-let img = document.getElementById("myImg2");
-let img = document.getElementById("myImg3");
-let img = document.getElementById("myImg4");
-let img = document.getElementById("myImg5");
-let modalImg = document.getElementById("img01");
-let modalImg = document.getElementById("img02");
-let modalImg = document.getElementById("img03");
-let modalImg = document.getElementById("img04");
-let modalImg = document.getElementById("img05");
+let img1 = document.getElementById("myImg1");
+let img2 = document.getElementById("myImg2");
+let img3 = document.getElementById("myImg3");
+let img4 = document.getElementById("myImg4");
+let img5 = document.getElementById("myImg5");
+let modalImg1 = document.getElementById("img01");
+let modalImg2 = document.getElementById("img02");
+let modalImg3 = document.getElementById("img03");
+let modalImg4 = document.getElementById("img04");
+let modalImg5 = document.getElementById("img05");
 let captionText = document.getElementById("caption");
-img.onclick = function(){
+img1.onclick = function(){
   modal.style.display = "block";
-  modalImg.src = this.src;
+  modalImg1.src = this.src;
   captionText.innerHTML = this.alt;
 }
-
+img2.onclick = function(){
+    modal.style.display = "block";
+    modalImg2.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img3.onclick = function(){
+    modal.style.display = "block";
+    modalImg3.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img4.onclick = function(){
+    modal.style.display = "block";
+    modalImg4.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img5.onclick = function(){
+    modal.style.display = "block";
+    modalImg5.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
 // Get the <span> element that closes the modal
 let span = document.getElementsByClassName("close")[0];
 
