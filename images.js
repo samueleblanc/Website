@@ -1,5 +1,9 @@
 // Get the modal
-let modal = document.getElementById("myModal");
+let modal1 = document.getElementById("myModal1");
+let modal2 = document.getElementById("myModal2");
+let modal3 = document.getElementById("myModal3");
+let modal4 = document.getElementById("myModal4");
+let modal5 = document.getElementById("myModal5");
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 let img1 = document.getElementById("myImg1");
@@ -14,27 +18,27 @@ let modalImg4 = document.getElementById("img04");
 let modalImg5 = document.getElementById("img05");
 let captionText = document.getElementById("caption");
 img1.onclick = function(){
-  modal.style.display = "block";
+  modal1.style.display = "block";
   modalImg1.src = this.src;
   captionText.innerHTML = this.alt;
 }
 img2.onclick = function(){
-    modal.style.display = "block";
+    modal2.style.display = "block";
     modalImg2.src = this.src;
     captionText.innerHTML = this.alt;
 }
 img3.onclick = function(){
-    modal.style.display = "block";
+    modal3.style.display = "block";
     modalImg3.src = this.src;
     captionText.innerHTML = this.alt;
 }
 img4.onclick = function(){
-    modal.style.display = "block";
+    modal4.style.display = "block";
     modalImg4.src = this.src;
     captionText.innerHTML = this.alt;
 }
 img5.onclick = function(){
-    modal.style.display = "block";
+    modal5.style.display = "block";
     modalImg5.src = this.src;
     captionText.innerHTML = this.alt;
   }
