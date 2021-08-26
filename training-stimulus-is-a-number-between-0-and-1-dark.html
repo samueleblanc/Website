@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
         <link rel="stylesheet" href="https://samueleblanc.com/darkmode.css">
         <link rel="icon" href="https://samueleblanc.com/Pictures/favicon.png">
         <title>Training stimulus is a number between 0 and 1</title>
@@ -30,20 +31,30 @@ other metrics, will slowly tilt the stimulus into the metabolic stress category.
  being an increase in time under tension (TUT), that will most likely lead to an increase in energy
   (glucose) demand, a reduction in oxygen availability, an increase in lactate concentration and 
   nitric oxide production. All of which are closely linked to metabolic work. The resistance profile
-   is also an extremely important metric.† Like explained in the article linked below, if you have
+   is also an extremely important metric.<sup>†</sup> Like explained in the article linked below, if you have
     an exercise which makes it more difficult to execute (due to an increase in power) in the part
      of the movement where the muscle is at its weakest, the metabolic demand will rise and vise versa.
 The tempo also needs to be taken into account. The first and third number are already included 
 in the resistance profile, but not the second and last. They manifest a clear impact in the 
 training stimulus, since spending more time in the most metabolically demanding part of the 
-movement (shortened muscle)‡ will increase the metabolic demand, and spending time in the lengthened
+movement (shortened muscle) will increase the metabolic demand, and spending time in the lengthened
  position will reduce the "stretch reflex" which is an often important component of strength training.
   The fact that the concentric part of the movement generates more power than the eccentric part (or 
   if the opposite is true) must be included in the process of finding the main stimulus or stimuli. 
   Since the concentric portion demands more energy than the eccentric, prioritizing the concentric, 
   for instance, will lead to a slightly more metabolically demanding workout.<br><br>
-<i>† To read more on resistance profiles, click <a href="https://samueleblanc.com/determining-a-mathematical-way-to-measure-resistance-profiles-dark.html" target="_blank">here</a>.<br>
-‡ Depending on the resistance profile, it might not be that part—but it often is.</i>
+<i>† To read more on resistance profiles, click <a href="https://samueleblanc.com/determining-a-mathematical-way-to-measure-resistance-profiles.html" target="_blank">here</a>.<br></i>
+<h3>The equation and the program</h3><img src="https://samueleblanc.com/Pictures/Training stimulus.png" alt="Sigmoid function" style="height: 45%; width: 45%; float: right;">
+A sigmoid function (<i>right</i>) was chosen, due to its property of nuance in the middle and none 
+in the extremes. Doing 30 reps per set or 100 reps are both in the endurance world, but 8 reps could be in any 
+category, depending on every variable.<br><br>
+The current equation is most likely far from being the best possible one. It only works with single joint movement, 
+with free weights. This version also only functions with muscles that shorten as the joint angle increases, but 
+that would be extremely simple to adjust. It also needs a lot more accuracy. The current equation is almost built 
+on a guess of how much impact a single variable has on determining  the stimulus. It is therefore necessary to come 
+up with new ways to test this. Furthermore, changing the way we get data is essential. Going from multiple input 
+functions where the user enters variables to a computer vision program that automatically inputs all of them would 
+help resolve many of the current issues.<br><br>
 <h3>The equation and the program</h3>
 A sigmoid function (shown below) was chosen, due to its property of nuance in the middle and none in the extremes. Doing 30 reps per set or 100 reps are both in the endurance world, but 8 reps could be in any category, depending on every variable.<br>
 <img src="https://samueleblanc.com/Pictures/Training stimulus.png" alt="Sigmoid function" class="center" style="height: 45%; width: 45%; margin-top: 7px;"><br><br>
@@ -143,9 +154,10 @@ Instead of naming training stimuli "strength", "hypertrophy", "glycolytic" or an
 <h4>Comparing two different lateral (or deltoids) raises</h4>
 <img src="https://samueleblanc.com/Pictures/Stimulus lateral raises compare.png" class="center" alt="Lateral raises stimulus" style="height: 50%; width: 50%;">
 <h3>Conclusion</h3>
-As of right now, the program shown above only works with single joint movement, with dumbbells or barbells while implicitly believing that, for every muscle, the increase in joint angle means shortening of the muscle.
-These challenges, and every other, could potentially be solved by changing the way we find the variables. The current input function is to be replaced.</div><br><br>
-
-        </p>
+Like said above, finding a way to prove how much influence a variable has over the outcome is necessary to provide us 
+with the actual stimulus. A statistical analysis of resistance training studies and being able to link the mechanics of 
+the exercise to the muscle architecture’s is the starting point in achieving that.<br><br>
+Being able to accurately find the stimulus of an exercise is the first step toward finding the outcome of a training, and 
+then translating that into a full periodization based on the main goal, their strength and their weakness.<br><br><br></div></p>
     </body>
 </html>
