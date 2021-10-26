@@ -29,3 +29,8 @@ a{
     text-align: center;
     margin: 5%;
 }
+.welcome{
+    font-family: 'Times New Roman';
+    font-size: 700%;
+    color: #1672e3;
+}
