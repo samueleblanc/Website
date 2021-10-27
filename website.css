@@ -40,3 +40,15 @@ a{
 .tabP{
     margin-left: 6%;
 }
+#pictureApp:hover + #infoApp{
+    height: 35%;
+    width: 35%;
+    opacity: 60%;
+    display: block;
+}
+#pictureBlog:hover + #infoBlog{
+    height: 35%;
+    width: 35%;
+    opacity: 60%;
+    display: block;
+}
