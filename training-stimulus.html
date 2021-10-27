@@ -15,21 +15,11 @@
         <p>Sorry, currently unavailable.<br><br>
     If you want to help with the project, please contact me via email.<br><br>
     <a href="mailto: samuel.solving.rt@gmail.com"><img src="https://samueleblanc.com/Pictures/email icon.png" style="width: 4%; height: 4%;"></a></p>
-        <!--<p>Enter your workout program</p><br>
+        <!--<p><h2>Enter your workout program</h2><br>
+        Hold the ctrl or cmd button to select multiple choice.</p>
         <form name="myForm">
-            <label for="muscleNum">Select the number of muscle group trained</label>
-            <select name="muscleNum">
-                <option value="m1">1</option>
-                <option value="m2">2</option>
-                <option value="m3">3</option>
-                <option value="m4">4</option>
-                <option value="m5">5</option>
-                <option value="m6">6</option>
-                <option value="m7">7</option>
-                <option value="mFB">Full body</option>
-            </select>
-            <label for="muscle">Select a working muscle group</label>
-            <select name="muscle">
+            <label for="muscle">Select the working muscle groups</label>
+            <select name="muscle" multiple>
                 <option value="chest">Chest</option>
                 <option value="back">Back</option>
                 <option value="delt">Deltoids</option>
@@ -38,11 +28,64 @@
                 <option value="quad">Quadriceps</option>
                 <option value="ham">Hamstrings</option>
                 <option value="calves">Calves</option>
-            </select>
-            <label>Select the number of exercise in your workout</label>
+            </select><br>
+            <button type="submit" onclick="Step1()">Submit</button>
+            <label style="display: none;">Select every chest exercise</label>
             <select>
-
-            </select>
+                <option value="cableCostal">Cable costal flyes</option>
+                <option value="cableFlyes">Cable flyes (horizontal)</option>
+                <option value="cableClavicular">Cable clavicular flyes</option>
+                <option value="declineDB">Decline DB press</option>
+                <option value="declineMachine">Decline machine press</option>
+                <option value="dips">Dips</option>
+                <option value="flatDBflyes">Flat DB flyes</option>
+                <option value="flatDB">Flat DB press</option>
+                <option value="flatMachine">Flat machine press</option>
+                <option value="hiDB">High incline DB press</option>
+                <option value="inclineDB">Incline DB press</option>
+                <option value="inclineMachine">Incline machine press</option>
+                <option value="liDB">Low incline DB press</option>
+                <option value="pecDeck">Pec deck</option>
+            </select><br>
+            <label style="display: none;">Select every deltoids exercise</label>
+            <select>
+                <option value="cableHpLateral">Cable high pulley lateral raises</option>
+                <option value="cableRearDflyes">Cable rear delts flyes</option>
+                <option value="chestSuppDB">Chest supported DB lateral raises</option>
+                <option value="DBlatraises">DB lateral raises</option>
+                <option value="DBrearrow">DB rear delts row</option>
+                <option value="DBshoulder">DB shoulder press</option>
+                <option value="DBy">DB Y raises</option>
+                <option value="reversePecdeck">Reverse pec deck</option>
+                <option value="shoulderMachineH">Shoulder press machine (hammer grip)</option>
+                <option value="SAcableLatraise">Single arm cable lateral raises</option>
+                <option value="SAcablerear">Single arm cable rear delt flyes</option>
+            </select><br>
+            <label style="display: none;">Select every biceps exercise</label>
+            <select>
+                <option value="45preacher">45° preacher curl</option>
+                <option value="90preacher">90° preacher curl</option>
+                <option value="backOnPreach">Back on preacher DB curl</option>
+                <option value="behindCablecurl">Behind the back cable curl</option>
+                <option value="cablebicCurl">Cable biceps curl</option>
+                <option value="highPcableCurl">High pulley cable curl</option>
+                <option value="DBbiceps">DB biceps curl</option>
+                <option value="DBhammer">DB hammer curl</option>
+                <option value="inclineDB">Incline DB curl</option>
+                <option value="reverseCableCurl">Reverse cable curl</option>
+                <option value="spider">Spider curl</option>
+            </select><br>
+            <label style="display: none;">Select every triceps exercise</label>
+                <select>
+                    <option value="cableTriceps">Cable triceps pushdown</option>
+                    <option value="closegripDB">Close grip DB press</option>
+                    <option value="closegripMachine">Close grip machine press</option>
+                    <option value="crossbodyTriceps">Crossbody triceps pushdown</option>
+                    <option value="OHcrossbodyTriceps">Overhead crossbody triceps pushdown</option>
+                    <option value="SAOHtriceps">Single arm cable overhead triceps pushdown</option>
+                    <option value="SAcableTriceps">Single arm cable triceps pushdown</option>
+                    <option value="tricepsRope">Triceps rope pushdown</option>
+                </select><br>
         </form>-->
     </body>
 </html>

@@ -43,18 +43,20 @@ a{
 #pictureApp{
     height: 30%;
     width: 30%;
+    opacity: 90%;
 }
 #pictureApp:hover{
-    height: 35%;
-    width: 35%;
-    opacity: 60%;
+    height: 33%;
+    width: 33%;
+    opacity: 100%;
 }
 #pictureBlog{
     height: 30%;
     width: 30%;
+    opacity: 90%;
 }
 #pictureBlog:hover{
-    height: 35%;
-    width: 35%;
-    opacity: 60%;
+    height: 33%;
+    width: 33%;
+    opacity: 100%;
 }

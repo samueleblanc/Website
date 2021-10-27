@@ -19,10 +19,6 @@ td, th{
     border: 1px solid white;
     text-align: center;
 }
-#CSfirst{
-    float: right;
-    margin: 0px 0px 0px 0px;
-}
 .center {
     display: block;
     margin-left: auto;
@@ -59,4 +55,92 @@ p6{
 }
 .white{
     color: whitesmoke;
+}
+#pic35{
+    width: 35%;
+    height: 35%;
+}
+#pic35:hover{
+    width: 40%;
+    height: 40%;
+}
+#pic65{
+    width: 65%;
+    height: 65%;
+}
+#pic65:hover{
+    width: 70%;
+    height: 70%;
+}
+#pic30{
+    width: 30%;
+    height: 30%;
+}
+#pic30:hover{
+    width: 35%;
+    height: 35%;
+}
+#pic30-1{
+    width: 30%;
+    height: 30%;
+}
+#pic30-1:hover{
+    width: 35%;
+    height: 35%;
+}
+#pic30-2{
+    width: 30%;
+    height: 30%;
+}
+#pic30-2:hover{
+    width: 35%;
+    height: 35%;
+}
+#pic30-3{
+    width: 30%;
+    height: 30%;
+}
+#pic30-3:hover{
+    width: 35%;
+    height: 35%;
+}
+#pic85{
+    width: 85%;
+    height: 85%;
+}
+#pic85:hover{
+    width: 90%;
+    height: 90%;
+}
+#pic85-1{
+    width: 85%;
+    height: 85%;
+}
+#pic85-1:hover{
+    width: 90%;
+    height: 90%;
+}
+#pic85-2{
+    width: 85%;
+    height: 85%;
+}
+#pic85-2:hover{
+    width: 90%;
+    height: 90%;
+}
+#pic45{
+    width: 45%;
+    height: 45%;
+}
+#pic45:hover{
+    width: 50%;
+    height: 50%;
+}
+#pic37{
+    width: 37%;
+    height: 37%;
+}
+#pic37:hover{
+    width: 42%;
+    height: 42%;
 }
