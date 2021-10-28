@@ -64,6 +64,14 @@ p6{
     width: 40%;
     height: 40%;
 }
+#pic35-1{
+    width: 35%;
+    height: 35%;
+}
+#pic35-1:hover{
+    width: 40%;
+    height: 40%;
+}
 #pic65{
     width: 65%;
     height: 65%;
@@ -109,24 +117,24 @@ p6{
     height: 85%;
 }
 #pic85:hover{
-    width: 90%;
-    height: 90%;
+    width: 93%;
+    height: 93%;
 }
 #pic85-1{
     width: 85%;
     height: 85%;
 }
 #pic85-1:hover{
-    width: 90%;
-    height: 90%;
+    width: 93%;
+    height: 93%;
 }
 #pic85-2{
     width: 85%;
     height: 85%;
 }
 #pic85-2:hover{
-    width: 90%;
-    height: 90%;
+    width: 93%;
+    height: 93%;
 }
 #pic45{
     width: 45%;
@@ -143,4 +151,44 @@ p6{
 #pic37:hover{
     width: 42%;
     height: 42%;
+}
+#pic33{
+    width: 33%;
+    height: 33%;
+}
+#pic33:hover{
+    width: 38%;
+    height: 38%;
+}
+#pic25{
+    width: 25%;
+    height: 25%;
+}
+#pic25:hover{
+    width: 30%;
+    height: 30%;
+}
+#pic55{
+    width: 55%;
+    height: 55%;
+}
+#pic55:hover{
+    width: 60%;
+    height: 60%;
+}
+#pic75{
+    width: 75%;
+    height: 75%;
+}
+#pic75:hover{
+    width: 80%;
+    height: 80%;
+}
+#pic50{
+    width: 50%;
+    height: 50%;
+}
+#pic50:hover{
+    width: 55%;
+    height: 55%;
 }

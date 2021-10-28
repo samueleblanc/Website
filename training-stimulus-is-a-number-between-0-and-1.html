@@ -44,7 +44,7 @@ movement (shortened muscle) will increase the metabolic demand, and spending tim
   Since the concentric portion demands more energy than the eccentric, prioritizing the concentric, 
   for instance, will lead to a slightly more metabolically demanding workout.<br><br>
 <i>† To read more on resistance profiles, click <a href="https://samueleblanc.com/determining-a-mathematical-way-to-measure-resistance-profiles.html" target="_blank">here</a>.<br></i>
-<h3>The equation and the program</h3><img src="https://samueleblanc.com/Pictures/Training stimulus.png" alt="Sigmoid function" style="height: 45%; width: 45%; float: right;">
+<h3>The equation and the program</h3><img src="https://samueleblanc.com/Pictures/Training stimulus.png" alt="Sigmoid function" id="pic45" style="float: right;">
 A sigmoid function (<i>right</i>) was chosen, due to its property of nuance in the middle and none 
 in the extremes. Doing 30 reps per set or 100 reps are both in the endurance world, but 8 reps could be in any 
 category, depending on every variable.<br><br>
@@ -56,7 +56,7 @@ up with new ways to test this. Furthermore, changing the way we get data is esse
 functions where the user enters variables to a computer vision program that automatically inputs all of them would 
 help resolve many of the current issues.<br><br>
 <p6><div class="box">
-<span class="comments">## This is the python program used for every example showed below</span><br><br>
+<span class="comments"># This is the python program used for every example showed below</span><br><br>
 
 <span class="function">import</span> math<br>
 <span class="function">import</span> numpy <span class="function">as</span> np<br>
@@ -64,7 +64,7 @@ help resolve many of the current issues.<br><br>
 <span class="function">from</span> matplotlib.lines <span class="function">import</span> Line2D<br>
 <span class="function">from</span> matplotlib.text <span class="function">import</span> Text<br><br>
 
-<span class="comments">## Input from the user and other variables</span><br>
+<span class="comments"># Input from the user and other variables</span><br>
 name = <span class="build">input</span>("Name of the exercise: ")<br>
 <span class="function">if</span> "preacher" <span class="function">in</span> name:<br>
     <span class="tab">preacher = <span class="build">input</span>("Angle of the preacher bench: ")</span><br>
@@ -76,7 +76,7 @@ reps = <span class="build">input</span>("Number of reps: ")<br>
 weight = 10<br>
 radius = 0.5<br><br>
 
-<span class="comments">## Resistance profile equation</span><br>
+<span class="comments"># Resistance profile equation</span><br>
 start = <span class="build">int</span>(rom[:2])<br>
 end = <span class="build">int</span>(rom[5:])<br>
 contr = <span class="build">int</span>(tempo[3])<br>
@@ -96,7 +96,7 @@ angle = np.<span class="build">arange</span>((start + <span class="build">int</s
 concentric = weight * radius * np.<span class="build">sin</span>(np.<span class="build">deg2rad</span>(angle)) * 9.8 * conVel<br>
 eccentric = weight * radius * np.<span class="build">sin</span>(np.<span class="build">deg2rad</span>(angle)) * 9.8 * usedAcc<br><br>
 
-<span class="comments">## Plot the resistance profile</span><br>
+<span class="comments"># Plot the resistance profile</span><br>
 x = <span class="build">list</span>(<span class="build">range</span>(start, (end + 1)))<br>
 p1 = plt.<span class="build">plot</span>(x, concentric, "g", label="Concentric")<br>
 p2 = plt.<span class="build">plot</span>(x, eccentric, 'b', label="Eccentric")<br>
@@ -106,7 +106,7 @@ plt.<span class="build">ylabel</span>("Power (W)")<br>
 plt.<span class="build">title</span>(f"Resistance profile of a {name}")<br>
 plt.<span class="build">show</span>()<br><br>
 
-<span class="comments">## Make sure that there is tension before allocating value to the time spent in a position</span><br>
+<span class="comments"># Make sure that there is tension before allocating value to the time spent in a position</span><br>
 
 <span class="function">if</span> stre > 0:<br>
 <span class="tab"><span class="function">if</span> (weight * radius * np.<span class="build">sin</span>(np.<span class="build">deg2rad</span>(start + <span class="build">int</span>(preacher))) * 9.8 * conVel) == 0:</span><br>
@@ -119,7 +119,7 @@ plt.<span class="build">show</span>()<br><br>
 <span class="tab"><span class="function">else</span>:</span><br>
 <span class="tabP"><span class="function">pass</span></span><br><br>
 
-<span class="comments">## Stimulus equation</span><br>
+<span class="comments"># Stimulus equation</span><br>
 <span class="function">if</span> <span class="build">max</span>(concentric) > <span class="build">max</span>(eccentric):<br>
 <span class="tab">conType = 0</span><br>
 <span class="function">else</span>:<br>
@@ -130,7 +130,7 @@ maxTen = maxIndex / <span class="build">len</span>(x)<br>
 point = ((<span class="build">int</span>(reps) / 2) - 5)+ (-0.5 * (stre + <span class="build">int</span>(tempo[0]))) + ((contr + (conVel / 2)) / 2) + conType + (maxTen * 2)<br>
 stimulus = 1 / (1 + (math.<span class="build">e</span> ** (-1 * point)))<br><br>
 
-<span class="comments">## Results</span><br>
+<span class="comments"># Results</span><br>
 fig1 = plt.<span class="build">figure</span>(facecolor='white')<br>
 ax1 = plt.<span class="build">axes</span>(frameon=False)<br>
 ax1.<span class="build">get_axis</span>().<span class="build">tick_bottom</span>()<br>
@@ -150,9 +150,9 @@ about it. I chose to go down a level of abstraction since we now have the tools 
 by a number between 0 and 1. The lower the number, the closer it is to absolute strength work and the higher, the closer 
 to absolute endurance. Muscle hypertrophy can happen at any number, but is predominant the closer it is to 0.5.<br>
 <h4>Comparing three different biceps curl</h4>
-<img src="https://samueleblanc.com/Pictures/Stimulus biceps curl compare.png" class="center" alt="Biceps curl stimulus" style="height: 75%; width: 75%;">
+<img src="https://samueleblanc.com/Pictures/Stimulus biceps curl compare.png" class="center" alt="Biceps curl stimulus" id="pic75">
 <h4>Comparing two different lateral (or deltoids) raises</h4>
-<img src="https://samueleblanc.com/Pictures/Stimulus lateral raises compare.png" class="center" alt="Lateral raises stimulus" style="height: 50%; width: 50%;">
+<img src="https://samueleblanc.com/Pictures/Stimulus lateral raises compare.png" class="center" alt="Lateral raises stimulus" id="pic50">
 <h3>Conclusion</h3>
 Like said above, finding a way to prove how much influence a variable has over the outcome is necessary to provide us 
 with the actual stimulus. A statistical analysis of resistance training studies and being able to link the mechanics of 
