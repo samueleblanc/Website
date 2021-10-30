@@ -30,8 +30,8 @@
                 <option value="calves">Calves</option>
             </select><br>
             <button type="submit" onclick="Step1()">Submit</button>
-            <label style="display: none;">Select every chest exercise</label>
-            <select>
+            <label id="chestQ" for="chest" style="display: none;">Select every chest exercise</label>
+            <select name="chest" multiple>
                 <option value="cableCostal">Cable costal flyes</option>
                 <option value="cableFlyes">Cable flyes (horizontal)</option>
                 <option value="cableClavicular">Cable clavicular flyes</option>
@@ -47,8 +47,8 @@
                 <option value="liDB">Low incline DB press</option>
                 <option value="pecDeck">Pec deck</option>
             </select><br>
-            <label style="display: none;">Select every deltoids exercise</label>
-            <select>
+            <label id="deltQ" for="delt" style="display: none;">Select every deltoids exercise</label>
+            <select name="delt">
                 <option value="cableHpLateral">Cable high pulley lateral raises</option>
                 <option value="cableRearDflyes">Cable rear delts flyes</option>
                 <option value="chestSuppDB">Chest supported DB lateral raises</option>
@@ -61,8 +61,8 @@
                 <option value="SAcableLatraise">Single arm cable lateral raises</option>
                 <option value="SAcablerear">Single arm cable rear delt flyes</option>
             </select><br>
-            <label style="display: none;">Select every biceps exercise</label>
-            <select>
+            <label id="bicQ" for="bic" style="display: none;">Select every biceps exercise</label>
+            <select name="bic">
                 <option value="45preacher">45° preacher curl</option>
                 <option value="90preacher">90° preacher curl</option>
                 <option value="backOnPreach">Back on preacher DB curl</option>
@@ -75,8 +75,8 @@
                 <option value="reverseCableCurl">Reverse cable curl</option>
                 <option value="spider">Spider curl</option>
             </select><br>
-            <label style="display: none;">Select every triceps exercise</label>
-                <select>
+            <label id="tricQ" for="tric" style="display: none;">Select every triceps exercise</label>
+                <select name="tric">
                     <option value="cableTriceps">Cable triceps pushdown</option>
                     <option value="closegripDB">Close grip DB press</option>
                     <option value="closegripMachine">Close grip machine press</option>
@@ -86,6 +86,11 @@
                     <option value="SAcableTriceps">Single arm cable triceps pushdown</option>
                     <option value="tricepsRope">Triceps rope pushdown</option>
                 </select><br>
-        </form>-->
+            *Add every other muscle
+            <table>
+                <tr><th></th><th>Sets x Reps</th><th>Exercise</th><th>Tempo</th></tr>
+                <tr><td></td><td></td><td></td><td></td></tr>
+            </table>-->
+        </form>
     </body>
 </html>

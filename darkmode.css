@@ -29,6 +29,7 @@ button{
     padding: 5px;
     border: 1px #d7d7d7 solid; 
     text-align: center;
+    cursor: pointer;
 }
 p6{
     font-family: monospace;
