@@ -51,6 +51,7 @@ a{
     height: 30%;
     width: 30%;
     opacity: 100%;
+    cursor: pointer;
 }
 #pictureBlog{
     height: 30%;
@@ -62,6 +63,7 @@ a{
     height: 30%;
     width: 30%;
     opacity: 100%;
+    cursor: pointer;
 }
 #home{
     height: 65%;
