@@ -33,6 +33,7 @@ a{
     font-family: 'Times New Roman';
     font-size: 700%;
     color: #1672e3;
+    opacity: 90%;
 }
 .tab{
     margin-left: 3%;
@@ -43,20 +44,48 @@ a{
 #pictureApp{
     height: 30%;
     width: 30%;
-    opacity: 90%;
+    opacity: 85%;
+    transition-duration: 0.2s;
 }
 #pictureApp:hover{
-    height: 33%;
-    width: 33%;
+    height: 30%;
+    width: 30%;
     opacity: 100%;
 }
 #pictureBlog{
     height: 30%;
     width: 30%;
     opacity: 90%;
+    transition-duration: 0.2s;
 }
 #pictureBlog:hover{
-    height: 33%;
-    width: 33%;
+    height: 30%;
+    width: 30%;
     opacity: 100%;
+}
+#home{
+    height: 65%;
+    width: 65%;
+    transition-duration: 0.2s;
+}
+#home:hover{
+    cursor: pointer;
+    height: 65%;
+    width: 65%;
+    opacity: 95%;
+}
+#dark{
+    color: black;
+    transition-duration: 0.3s;
+    border: 2px black solid;
+    border-radius: 7px;
+    padding: 10px;
+}
+#dark:hover{
+    color: white;
+    cursor: pointer;
+    border: 2px black solid;
+    border-radius: 7px;
+    background-color: black;
+    padding: 10px;
 }

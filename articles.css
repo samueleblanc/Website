@@ -27,11 +27,52 @@ td, th{
     margin-right: auto;
     width: 100%;
   }
-button{
+.menu{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.img{
+    flex-basis: 90%;
+    height: 100%;
+    width: 100%;
+}
+#pdf{
     padding: 5px;
     border: 1px #d7d7d7 solid; 
     text-align: center;
+    color: black;
+    transition-duration: 0.3s;
+}
+#pdf:hover{
     cursor: pointer;
+    background-color: #d6d6d6;
+}
+#dark{
+    color: black;
+    transition-duration: 0.3s;
+    border: 2px black solid;
+    border-radius: 7px;
+    padding: 10px;
+}
+#dark:hover{
+    color: white;
+    cursor: pointer;
+    border: 2px black solid;
+    border-radius: 7px;
+    background-color: black;
+    padding: 10px;
+}
+#home{
+    width: 20%;
+    height: 20%;
+    transition-duration: 0.4s;
+}
+#home:hover{
+    cursor: pointer;
+    width: 20%;
+    height: 20%;
+    opacity: 90%;
 }
 p6{
     font-family: monospace;
