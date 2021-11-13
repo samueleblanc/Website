@@ -46,6 +46,17 @@ td, th{
     cursor: pointer;
     background-color: #d6d6d6;
 }
+#py{
+    padding: 5px;
+    border: 1px #d7d7d7 solid; 
+    text-align: center;
+    color: black;
+    transition-duration: 0.3s;
+}
+#py:hover{
+    cursor: pointer;
+    background-color: #d6d6d6;
+}
 #normal{
     color: white;
     transition-duration: 0.3s;
