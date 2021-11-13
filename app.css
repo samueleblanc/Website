@@ -58,6 +58,10 @@ button:hover{
     height: 20%;
     opacity: 90%;
 }
+#email{
+    width: 4%;
+    height: 4%;
+}
 @media only screen and (max-device-width: 550px){
     #home{
         width: 45%;
@@ -94,5 +98,9 @@ button:hover{
         cursor: pointer;
         border: #1672e3 solid 2px;
         border-radius: 7px;
+    }
+    #email{
+        width: 8%;
+        height: auto;
     }
 }
