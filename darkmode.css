@@ -57,7 +57,7 @@ td, th{
 #normal:hover{
     color: black;
     cursor: pointer;
-    border: 2px black solid;
+    border: 2px white solid;
     border-radius: 7px;
     background-color: white;
     padding: 10px;
