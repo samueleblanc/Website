@@ -244,6 +244,10 @@ p6{
     width: 55%;
     height: 55%;
 }
+#email{
+    width: 4%;
+    height: 4%;
+}
 @media only screen and (max-device-width: 550px){
     #home{
         width: 45%;
@@ -258,6 +262,10 @@ p6{
     }
     #pic25, #pic30, #pic30-1, #pic30-2, #pic30-3, #pic33, #pic35, #pic35-1, #pic37, #pic45, #pic50, #pic55, #pic65, #pic75, #pic85, #pic85-1, #pic85-2{
         width: 100%;
+        height: auto;
+    }
+    #email{
+        width: 8%;
         height: auto;
     }
 }
