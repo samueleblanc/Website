@@ -32,7 +32,7 @@ button{
 
 }
 button:hover{
-    font-size: 21px;
+    font-size: 20px;
     color: white;
     background-color: #1672e3;
     text-align: center;
@@ -57,4 +57,42 @@ button:hover{
     width: 20%;
     height: 20%;
     opacity: 90%;
+}
+@media only screen and (max-device-width: 550px){
+    #home{
+        width: 45%;
+        height: auto;
+        transition-duration: 0.2s;
+    }
+    #home:hover{
+        cursor: pointer;
+        width: 45%;
+        height: auto;
+        opacity: 90%;
+    }
+    button{
+        width: 30%;
+        height: auto;
+        font-size: 70%;
+        color: black;
+        text-align: center;
+        background-color: white;
+        border: #1672e3 solid 2px;
+        padding: 5px;
+        border-radius: 7px;
+        transition-duration: 0.4s;
+    
+    }
+    button:hover{
+        width: 30%;
+        height: auto;
+        font-size: 70%;
+        color: white;
+        background-color: #1672e3;
+        text-align: center;
+        padding: 5px;
+        cursor: pointer;
+        border: #1672e3 solid 2px;
+        border-radius: 7px;
+    }
 }
