@@ -113,136 +113,119 @@ p6{
     height: 35%;
 }
 #pic35:hover{
-    width: 40%;
-    height: 40%;
+    cursor: pointer;
 }
 #pic35-1{
     width: 35%;
     height: 35%;
 }
 #pic35-1:hover{
-    width: 40%;
-    height: 40%;
+    cursor: pointer;
 }
 #pic65{
     width: 65%;
     height: 65%;
 }
 #pic65:hover{
-    width: 70%;
-    height: 70%;
+    cursor: pointer;
 }
 #pic30{
     width: 30%;
     height: 30%;
 }
 #pic30:hover{
-    width: 35%;
-    height: 35%;
+    cursor: pointer;
 }
 #pic30-1{
     width: 30%;
     height: 30%;
 }
 #pic30-1:hover{
-    width: 35%;
-    height: 35%;
+    cursor: pointer;
 }
 #pic30-2{
     width: 30%;
     height: 30%;
 }
 #pic30-2:hover{
-    width: 35%;
-    height: 35%;
+    cursor: pointer;
 }
 #pic30-3{
     width: 30%;
     height: 30%;
 }
 #pic30-3:hover{
-    width: 35%;
-    height: 35%;
+    cursor: pointer;
 }
 #pic85{
     width: 85%;
     height: 85%;
 }
 #pic85:hover{
-    width: 93%;
-    height: 93%;
+    cursor: pointer;
 }
 #pic85-1{
     width: 85%;
     height: 85%;
 }
 #pic85-1:hover{
-    width: 93%;
-    height: 93%;
+    cursor: pointer;
 }
 #pic85-2{
     width: 85%;
     height: 85%;
 }
 #pic85-2:hover{
-    width: 93%;
-    height: 93%;
+    cursor: pointer;
 }
 #pic45{
     width: 45%;
     height: 45%;
 }
 #pic45:hover{
-    width: 50%;
-    height: 50%;
+    cursor: pointer;
 }
 #pic37{
     width: 37%;
     height: 37%;
 }
 #pic37:hover{
-    width: 42%;
-    height: 42%;
+    cursor: pointer;
 }
 #pic33{
     width: 33%;
     height: 33%;
 }
 #pic33:hover{
-    width: 38%;
-    height: 38%;
+    cursor: pointer;
 }
 #pic25{
     width: 25%;
     height: 25%;
 }
 #pic25:hover{
-    width: 30%;
-    height: 30%;
+    cursor: pointer;
 }
 #pic55{
     width: 55%;
     height: 55%;
 }
 #pic55:hover{
-    width: 60%;
-    height: 60%;
+    cursor: pointer;
 }
 #pic75{
     width: 75%;
     height: 75%;
 }
 #pic75:hover{
-    width: 80%;
-    height: 80%;
+    cursor: pointer;
 }
 #pic50{
     width: 50%;
     height: 50%;
 }
 #pic50:hover{
-    width: 55%;
-    height: 55%;
+    cursor: pointer;
 }
 #email{
     width: 4%;

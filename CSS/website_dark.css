@@ -43,8 +43,8 @@ h1, h2{
     margin-left: 6%;
 }
 #home{
-    height: 65%;
-    width: 65%;
+    height: 55%;
+    width: 55%;
     transition-duration: 0.2s;
 }
 #home:hover{

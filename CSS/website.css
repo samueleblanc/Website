@@ -98,14 +98,14 @@ a{
     }
 }
 #home{
-    height: 65%;
-    width: 65%;
+    height: 55%;
+    width: 55%;
     transition-duration: 0.2s;
 }
 #home:hover{
     cursor: pointer;
-    height: 65%;
-    width: 65%;
+    height: 55%;
+    width: 55%;
     opacity: 95%;
 }
 #dark{
