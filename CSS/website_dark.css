@@ -49,8 +49,8 @@ h1, h2{
 }
 #home:hover{
     cursor: pointer;
-    height: 65%;
-    width: 65%;
+    height: 55%;
+    width: 55%;
     opacity: 95%;
 }
 #normal{
