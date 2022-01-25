@@ -1,4 +1,5 @@
 var click = 0;
+if (screen.width > 550) {
 function bigger30() {
     click++;
     var pic30 = document.getElementById("pic30");
@@ -202,4 +203,5 @@ function bigger50() {
         pic50.style.height = "50%";
         pic50.style.width = "50%";
     }
+}
 }

@@ -3,9 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://samueleblanc.com/CSS/articles.css">
+        <link rel="stylesheet" href="CSS/articles.css">
         <link rel="icon" href="https://samueleblanc.com/Pictures/favicon.png">
         <script src="https://samueleblanc.com/JS/style.js"></script>
+        <script src="JS/resistance-profile.js"></script>
         <title>Determining a mathematical way to measure resistance profiles</title>
     </head>
     <body>
@@ -295,6 +296,38 @@
             copy it from the PDF below and paste it in Python. Please remember that (as of right now) it
             can't use every exercise, only those with one rotating joint, and that use a dumbbell or a
             barbell.<br><br>
+            <h2>Resistance profile calculator</h2>
+            <form name="resistance">
+            <table>
+                <tr>
+                    <td><strong>Exercise name</strong></td>
+                    <td><input id="name" type="text"></td>
+                </tr>
+                <tr>
+                    <td><strong>Weight used (in kg)</strong></td>
+                    <td><input id="weight" type="text"></td>
+                </tr>
+                <tr>
+                    <td><strong>Range of motion (in degree)</strong></td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">From</td>
+                    <td><input id="start" type="text"></td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">To</td>
+                    <td><input id="end" type="text"></td>
+                </tr>
+                <tr>
+                    <td><strong>Tempo (in second)</strong></td>
+                    <td><input id="tempo" type="text" placeholder="1234"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="Submit" id="sub" onclick="res_pro()"></td>
+                </tr>
+            </table>
+            </form><br><br>
             To download the python program: <form method="GET" action="https://samueleblanc.com/Articles/Resistance profile program (Python).pdf" target="_blank"><button type="submit" id="py">Click here</button></form><br><br>
             <h3>Current limitations</h3>
             As of right now, there are a couple limitations concerning the practicality and efficacy of the
