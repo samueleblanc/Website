@@ -1,0 +1,12 @@
+body {
+    text-align: center;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+#logo {
+    width: 11%;
+    height: 11%;
+    float: left;
+}
