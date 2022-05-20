@@ -253,8 +253,8 @@ tr, td {
         background-color: lightgrey;
     }
     #title {
-        width: 28%;
-        height: 28%;
+        width: 35%;
+        height: 35%;
         display: block;
         margin: auto;
     }
@@ -268,8 +268,8 @@ tr, td {
         margin-right: 10px;
     }
     .info {
-        width: 3%;
-        height: 3%;
+        width: 6%;
+        height: 6%;
         float: right;
     }
     .infoDiv {
