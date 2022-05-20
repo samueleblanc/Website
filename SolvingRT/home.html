@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://samueleblanc.com/SolvingRT/articles.css">
+    <link rel="icon" href="https://samueleblanc.com/Pictures/favicon.png">
+    <title>SolvingRT</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const copyPip = "pip install git+https://github.com/samueleblanc/SolvingRT.git";
+
+        function copyLink() {
+            navigator.clipboard.writeText(copyPip);
+        };
+    </script>
+    <header>
+        <a href="https://github.com/samueleblanc/SolvingRT" target="_blank"><img src="https://samueleblanc.com/Pictures/github logo.jpg" id="github" alt="GitHub logo"></a><br>
+    </header><br><br>
+    <a href="https://samueleblanc.com/index.html"><img src="https://samueleblanc.com/Pictures/website title.png" alt="Solving resistance training" id="homeSRT"></a><br>
+    <div class="introduction"><p>
+        The primary goal of SolvingRT is to quantify exercise mechanics, to be able to standardize the technique or tempo used while doing a lift. 
+        This can be used to make experimental studies more rigorous — for instance by making sure that the velocity is kept the same while performing a movement 
+        in a research on mind-muscle connection. Also, it would reduce the cost, or increase the reliability of longitudinal studies by making it possible for subjects 
+        to film themselves while training and use the videos to, again, standardize the movement quality.<br><br>
+        <a href="https://samueleblanc.com/SolvingRT/documentation.html" target="_blank">Full documentation</a>
+    </p></div>
+    <div class="row">
+        <div class="column left"><h1>SolvingRT app</h1>
+        <p>
+            <span id="pipInstall">pip install git+https://github.com/samueleblanc/SolvingRT.git <button onclick="copyLink()" id="copyBtn">Copy</button></span>
+            <span id="cellphone">SolvingRT is not available on a cellphone since it is a Python library.</span><br><br>
+            <video width="500" height="300" autoplay muted>
+                <source src="https://samueleblanc.com/SolvingRT/preacher_curl.mp4" type="video/mp4">
+                Update your browser to see the video</video><br>
+                <p><h4>Code to produce this video:</h4>
+                <div class="codeHome">
+                    <span class="builtin">import</span> solvingrt.solve <span class="builtin">as</span> srt<br><br>
+                    athlete1 <span class="operators">=</span> <span class="classname">srt</span>.<span class="classname">Athlete</span>(1.85, 100, 0.35, 10, "left")<br>
+                    exercise1 <span class="operators">=</span> <span class="classname">srt</span>.<span class="classname">Exercise</span>("Preacher curl", "biceps", "path/to/preacher_curl.mp4", athlete1, ["torque", "velocity lost"])<br><br>
+                    exercise1.<span class="function">video_resize</span>(720, 400)<br>
+                    exercise1.<span class="function">angle_with_gravity</span>()<br><br>
+                    exercise1.<span class="function">play_video</span>()
+                </div></p>
+                <p><h4>Output:</h4>
+                    <div class="codeHome">
+                    Data calculated for each rep: [['Rep #1', 'Torque: 24.7202 Nm'], ['Rep #2', 'Torque: 24.4874 Nm'], ['Rep #3', 'Torque: 23.8655 Nm'], ['Rep #4', 'Torque: 25.0046 Nm'], ['Rep #5', 'Torque: 24.5612 Nm']]<br><br>
+                    Data calculated for the set: ['Velocity lost: 27.03%']</div></p>
+        </p>
+        </div>
+        <div class="column right"><h1>SolvingRT blog</h1><br>
+        <p>
+        <h3>A 4D model of training in relationship with a 5D model of personality</h3>
+            <p class="preview">Most personal trainers and coaches will adjust the resistance training program based on 
+            their clients preference. It will most likely be done through asking questions and through 
+            trial and error... <a href="https://samueleblanc.com/SolvingRT/a-4d-model-of-training-in-relationship-with-a-5d-model-of-personality.html" target="_blank">Read more</a><br></p><span class="greyText">2021-08-23</span><br>
+        <h3>Power as a tool to represent tension</h3>
+        <p class="preview">Numerous methods are being used to interpret how much a muscle works during an
+            exercise; like the force output (or torque) of a muscle and the electrical signal transmission
+            (electromyography (EMG)) or activation of a muscle. However, measuring...
+            <a href="https://samueleblanc.com/SolvingRT/power-as-a-tool-to-approximate-tension.html" target="_blank">Read more</a><br></p><span class="greyText">2021-04-22</span><br>
+            <h3>The optimal range of motion for hypertrophy: A review of the literature</h3>
+            <p class="preview">The purpose of this unofficial review is to hopefully shed some light on various
+                misunderstandings concerning range of motion (ROM) and its application. There are
+                currently two reviews... <a href="https://samueleblanc.com/SolvingRT/the-optimal-range-of-motion-for-hypertrophy-a-review-of-the-literature.html" target="_blank">Read more</a><br></p><span class="greyText">2021-01-22</span><br>
+        </p>
+        </div>
+    </div><br>
+
+</body>
+</html>

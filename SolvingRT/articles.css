@@ -1,0 +1,429 @@
+body{
+    margin: 0% 7% 0% 7%;
+    text-align: justify;
+    font-family: sans-serif;
+}
+h1, h2, h3, h4{
+    font-family: 'Times New Roman';
+}
+a{
+    color: #1672e3;
+}
+table{
+    border-collapse: collapse;
+    width: 50%;
+}
+td, th{
+    border: 1px solid black;
+    text-align: center;
+}
+.row {
+    display: block;
+}
+.column{
+    float: left;
+}
+.left {
+    width: 50%;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+.right {
+    width: 50%;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+.left h1 {
+    font-size: 30px;
+}
+.left video {
+    display: block;
+    margin: auto;
+    width: 90%;
+}
+.right h1 {
+    font-size: 30px;
+}
+.right a {
+    color: #1672e3;
+}
+.preview {
+    text-align: justify;
+    width: 100%;
+}
+.greyText{
+    color: #585858;
+    font-size: 14px;
+    font-family: 'Times New Roman';
+}
+#CSfirst{
+    float: right;
+    margin: 0px 0px 0px 0px;
+}
+#github {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 4%;
+    height: 4%;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+#github:hover {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 4%;
+    height: 4%;
+    opacity: 90%;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+.menu{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.img{
+    flex-basis: 90%;
+    height: 100%;
+    width: 100%;
+}
+#pdf{
+    padding: 5px;
+    border: 1px #d7d7d7 solid; 
+    text-align: center;
+    color: black;
+    transition-duration: 0.3s;
+}
+#pdf:hover{
+    cursor: pointer;
+    background-color: #d6d6d6;
+}
+#dark{
+    color: black;
+    transition-duration: 0.3s;
+    border: 2px black solid;
+    border-radius: 7px;
+    padding: 10px;
+}
+#dark:hover{
+    color: white;
+    cursor: pointer;
+    border: 2px black solid;
+    border-radius: 7px;
+    background-color: black;
+    padding: 10px;
+}
+#home{
+    width: 20%;
+    height: 20%;
+    transition-duration: 0.4s;
+}
+#home:hover{
+    cursor: pointer;
+    width: 20%;
+    height: 20%;
+    opacity: 90%;
+}
+#homeDoc{
+    width: 25%;
+    height: 25%;
+    transition-duration: 0.2s;
+}
+#homeDoc:hover{
+    cursor: pointer;
+    width: 25%;
+    height: 25%;
+    opacity: 90%;
+}
+#githubDoc {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 14%;
+    height: 14%;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+#githubDoc:hover {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 14%;
+    height: 14%;
+    opacity: 90%;
+}
+#homeSRT{
+    display: block;
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    transition-duration: 0.4s;
+}
+#homeSRT:hover{
+    cursor: pointer;
+    width: 50%;
+    height: 50%;
+    opacity: 90%;
+}
+table, tr, td {
+    text-align: center;
+    border: none;
+    border-collapse: collapse;
+    width: 35%;
+    padding: 1%;
+}
+#sub{
+    padding: 6px;
+    border: 1px #d7d7d7 solid; 
+    text-align: center;
+    color: black;
+    transition-duration: 0.3s;
+}
+#sub:hover{
+    cursor: pointer;
+    background-color: #d6d6d6;
+}
+.introduction {
+    text-align: justify;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 5%;
+}
+.tab{
+    margin-left: 3%;
+}
+.tabP{
+    margin-left: 6%;
+}
+#pic35{
+    width: 35%;
+    height: 35%;
+}
+#pic65{
+    width: 65%;
+    height: 65%;
+}
+#pic30{
+    width: 30%;
+    height: 30%;
+}
+#pic85{
+    width: 85%;
+    height: 85%;
+}
+#pic45{
+    width: 45%;
+    height: 45%;
+}
+#pic37{
+    width: 37%;
+    height: 37%;
+}
+#pic33{
+    width: 33%;
+    height: 33%;
+}
+#pic25{
+    width: 25%;
+    height: 25%;
+}
+#pic55{
+    width: 55%;
+    height: 55%;
+}
+#pic75{
+    width: 75%;
+    height: 75%;
+}
+#pic50{
+    width: 50%;
+    height: 50%;
+}
+#email{
+    width: 4%;
+    height: 4%;
+}
+#pipInstall {
+    font-family: monospace;
+    font-size: 13px;
+    background-color: #d7d7d7;
+    color: black;
+    padding: 13px;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+    width: 90%;
+}
+#copyBtn{
+    padding: 5px 5px 5px 5px;
+    border: 2px rgb(36, 36, 36) solid; 
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    text-align: center;
+    color: black;
+    background-color: whitesmoke;
+    transition-duration: 0.2s;
+}
+#copyBtn:hover{
+    cursor: pointer;
+    border: 2px #1672e3 solid; 
+    border-radius: 5px;
+    background-color: whitesmoke;
+}
+#cellphone {
+    display: none;
+}
+.code {
+    background-color: whitesmoke;
+    font-family: monospace;
+    font-size: 14px;
+    text-align: left;
+    padding: 5px;
+    width: 90%;
+    margin: auto;
+}
+.codeHome {
+    background-color: whitesmoke;
+    font-family: monospace;
+    font-size: 13px;
+    text-align: left;
+    padding: 5px;
+    width: 90%;
+    margin: auto;
+}
+.function {
+    color: rgb(121, 1, 172);
+}
+.builtin {
+    color: orangered;
+}
+.classname {
+    color: rgb(180, 87, 53);
+}
+.operator {
+    color: blue;
+}
+.comment {
+    color: green;
+}
+.topcomment {
+    color: rgb(55, 55, 55);
+}
+@media only screen and (max-device-width: 550px){
+    #home{
+        width: 45%;
+        height: auto;
+        transition-duration: 0.2s;
+    }
+    #home:hover{
+        cursor: pointer;
+        width: 45%;
+        height: auto;
+        opacity: 90%;
+    }
+    #homeDoc{
+        margin-top: 10px;
+        width: 75%;
+        height: 75%;
+        transition-duration: 0.2s;
+    }
+    #homeDoc:hover{
+        cursor: pointer;
+        margin-top: 10px;
+        width: 75%;
+        height: 75%;
+        opacity: 90%;
+    }
+    #githubDoc {
+        float: right;
+        margin-right: 10px;
+        width: 14%;
+        height: 14%;
+        cursor: pointer;
+        transition-duration: 0.2s;
+    }
+    #githubDoc:hover {
+        float: right;
+        margin-right: 10px;
+        width: 14%;
+        height: 14%;
+        opacity: 90%;
+    }
+    #homeSRT{
+        display: block;
+        margin: auto;
+        width: 60%;
+        height: 60%;
+        transition-duration: 0.4s;
+    }
+    #homeSRT:hover{
+        width: 60%;
+        height: 60%;
+        opacity: 90%;
+    }
+    #github {
+        float: right;
+        margin-top: 10px;
+        margin-right: 10px;
+        width: 7%;
+        height: 7%;
+    }
+    #github:hover {
+        float: right;
+        margin-top: 10px;
+        margin-right: 10px;
+        width: 7%;
+        height: 7%;
+        opacity: 90%;
+    }
+    .column{
+        display: block;
+        position: relative;
+        margin: auto;
+    }
+    .left {
+        width: 100%;
+        text-align: center;
+        position: relative;
+    }
+    .right {
+        width: 100%;
+        text-align: center;
+        position: relative;
+    }
+    .left video {
+        width: 100%;
+    }
+    .left h1 {
+        font-size: 22px;
+    }
+    .right h1 {
+        font-size: 22px;
+    }
+    #pic25, #pic30, #pic33, #pic35, #pic37, #pic45, #pic50, #pic55, #pic65, #pic75, #pic85 {
+        width: 100%;
+        height: auto;
+    }
+    #email{
+        width: 8%;
+        height: auto;
+    }
+    #pipInstall {
+        display: none;
+    }
+    #copyBtn {
+        display: none;
+    }
+    #cellphone {
+        display: block;
+    }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://samueleblanc.com/SolvingRT/articles.css">
+    <link rel="icon" href="https://samueleblanc.com/Pictures/favicon.png">
+    <title>SolvingRT - Documentation</title>
+</head>
+<body>
+    <header><div class="menu"><div class="img"><a href="https://samueleblanc.com/SolvingRT/home.html"><img src="https://samueleblanc.com/Pictures/website title.png" alt="Solving resistance training" id="homeDoc"></a></div><div><a href="https://github.com/samueleblanc/SolvingRT" target="_blank"><img src="https://samueleblanc.com/Pictures/github logo.jpg" id="githubDoc" alt="GitHub logo"></a></div></div></header>
+    <br><h1 style="text-align: center;">Documentation</h1>
+    <p><br>
+        <h2>Installation</h2>
+        <div class="code">
+            <br># With pip<br>
+            pip install git+https://github.com/samueleblanc/SolvingRT.git<br><br>
+            # With conda<br>
+            conda create --name EnvironmentName<br>
+            conda activate EnvironmentName<br>
+            conda install git<br>
+            conda install pip<br>
+            pip install git+https://github.com/samueleblanc/SolvingRT.git<br><br>
+        </div><br>
+        <a href="https://numpy.org/" target="_blank">Numpy</a>, <a href="https://matplotlib.org/" target="_blank">matplotlib</a>, <a href="https://opencv.org/" target="_blank">opencv</a> and <a href="https://google.github.io/mediapipe/" target="_blank">mediapipe</a> are also needed. 
+        They will be installed during the installation of SolvingRT if you don't already have them.
+        <br><br>
+        <h2>Code structure</h2>
+        <div class="code"><br>
+            <span class="builtin">import</span> solvingrt.solve <span class="builtin">as</span> srt<br><br>
+            athlete1 <span class="operators">=</span> <span class="classname">srt</span>.<span class="classname">Athlete</span>(heigth_in_meter, body_weight_in_kg, length_moving_limb_meter, weight_used_kg, "side_seen")<br>
+            exercise1 <span class="operators">=</span> <span class="classname">srt</span>.<span class="classname">Exercise</span>("name_of_exercise", "muscle_group", "/path/to/video.mp4", athlete1, ["measures", "that", "you", "want"])<br><br>
+            exercise1.<span class="function">play_video</span>()  <span class="comment"> # The last function called must be 'play_video()'</span><br><br>
+        </div><br>
+        <h2>List of measures</h2>
+        The last argument for the class Exercise is the array with every measures you want to compute. Here's the list of all that are currently available.<br>
+        <dl>
+            <dt>"speed"</dt>
+            <dd>→ outputs the average angular velocity (rad/s) for the concentric and the eccentric portion for each rep</dd>
+            <dt>"torque</dt>
+            <dd>→ outputs the average torque (Nm) for each rep</dd>
+            <dt>"power"</dt>
+            <dd>→ outputs the average power (W) for the concentric and the eccentric portion for each rep</dd>
+            <dt>"time under tension"</dt>
+            <dd>→ outputs the amount of time (s) spent under significant tension (at least 5% of the length of the limb is perpendicular to the force) for the whole set</dd>
+            <dt>"angles"</dt>
+            <dd>→ outputs the smallest and biggest angle (°) attained in the whole set</dd>
+            <dt>"velocity lost"</dt>
+            <dd>→ outputs the percentage (%) of concentric velocity (rad/s) lost during the set</dd>
+            <dt>"parallel"</dt>
+            <dd>→ outputs True or False for each rep, depending if the person reached parallel or not (only available for squats)</dd>
+            <dt>"tempo"</dt>
+            <dd>→ outputs the amount of time (s) spent in the concentric or eccentric part of the movement for every rep (time while in stretched or shortened position not available)</dd>
+            <dt>"resistance profile"</dt>
+            <dd>→ outputs a graph of the torque for every angle (during rep 2 and 3 since sometimes the first one has a little bit of setting-up)</dd>
+        </dl><br>
+        <h2>List of functions</h2>
+        <div class="code">
+            <span class="topcomment"><br>"""<br>
+                Methods available for the Athlete class<br><br>
+                inches_to_meter(), lb_to_kg(), set_weight_used()
+                <br>"""</span><br><br>
+            ath = <span class="classname">srt</span>.<span class="classname">Athlete</span>(70, 180, 15, 25, "front")<br><br>
+            <span class="function">print</span>(ath.height, ath.moving_limb) <span class="comment"># -> 70 15</span><br>
+            ath.<span class="function">inches_to_meter</span>()  <span class="comment"># Will change every length from inches to meter</span><br>
+            <span class="function">print</span>(f"New heigth: {ath.height}m, new limb length: {ath.moving_limb}m") <span class="comment"># -> New heigth: 1.778m, new limb length: 0.381m</span><br><br>
+            <span class="function">print</span>(ath.body_weight, ath.weight_used) <span class="comment"># -> 180 25</span><br>
+            ath.<span class="function">lb_to_kg</span>() <span class="comment"># Will change every weight from lb into kg</span><br>
+            <span class="function">print</span>(f"New body weight: {ath.body_weight}kg, new weight used: {ath.weight_used}kg") <span class="comment"># -> New body weight: 81.6466kg, new weight used: 11.3398kg</span><br><br>
+            <span class="function">print</span>(ath.weight_used) <span class="comment"># -> 11.3398</span><br>
+            ath.<span class="function">set_weight_used</span>(weight=30) <span class="comment"># Will change the weight used</span><br>
+            <span class="function">print</span>(f"New weight used: {ath.weight_used}kg") <span class="comment"># -> New weight used: 30.0kg</span><br><br>
+        </div><br><br>
+        <div class="code">
+            <span class="topcomment"><br>"""<br>
+            Methods available for the Exercise class<br><br>
+            change_muscle(), video_resize(), no_lines(), <br>
+            joint_angle(), angle_with_gravity(), switch_side(), <br>
+            save_in_file(), play_video()<br>
+            """</span><br><br>
+            curl = <span class="classname">srt</span>.<span class="classname">Exercise</span>("Hammer curl", "biceps", "/path/to/hammer_curl.mp4", ath, ["power", "angles"])<br><br>
+            <span class="function">print</span>(curl.muscle) <span class="comment"> # -> biceps</span><br>
+            curl.<span class="function">change_muscle</span>(new_muscle="triceps")<br>
+            <span class="function">print</span>(f"New muscle: {curl.muscle}") <span class="comment"> # -> New muscle: triceps</span><br><br>
+            curl.<span class="function">video_resize</span>(width=1280, height=720) <span class="comment"> # Will change the size of the video to 1280x720</span><br><br>
+            curl.<span class="function">no_lines</span>() <span class="comment"> # There will be no line drawn over the video to show the moving limb</span><br><br>
+            curl.<span class="function">joint_angle</span>() <span class="comment"> # The angle of the moving joint will be written on the video</span><br><br>
+            curl.<span class="function">angle_with_gravity</span>() <span class="comment"> # The angle between gravity and the moving limb will be written on the video</span><br><br>
+            curl.<span class="function">switch_side</span>() <span class="comment"> # Changes the side computed (only work if "side_seen" is "front" or "back")</span><br>
+            <span class="topcomment">"""<br>For performance reason, only one of the lifter's side is being computed. If "side_seen" is "front" or "back",<br>
+            the left side is the one being computed. 'switch_side()' will change it to the right side.<br>"""</span><br><br>
+            curl.<span class="function">save_in_file</span>() <span class="comment"> # Will save the result in a text file in the current directory instead of printing them on the screen</span><br><br>
+            curl.<span class="function">play_video</span>() <span class="comment"> # The video will be played. Must be the last function called</span><br><br>
+        </div>
+    </p><br><br>
+</body>
+</html>

@@ -1,0 +1,168 @@
+body{
+    margin: 0% 7% 0% 7%;
+    text-align: justify;
+    background-color: rgb(17, 17, 17);
+    font-family: sans-serif
+}
+h1, h2, h3, h4{
+    color: white;
+    font-family: 'Times New Roman';
+}
+a{
+    color: #1672e3;
+}
+table{
+    border-collapse: collapse;
+    width: 50%;
+}
+td, th{
+    border: 1px solid white;
+    text-align: center;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+.menu{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.img{
+    flex-basis: 90%;
+    height: 100%;
+    width: 100%;
+}
+#pdf{
+    padding: 5px;
+    border: 1px #d7d7d7 solid; 
+    text-align: center;
+    color: black;
+    transition-duration: 0.3s;
+}
+#pdf:hover{
+    cursor: pointer;
+    background-color: #d6d6d6;
+}
+#py{
+    padding: 5px;
+    border: 1px #d7d7d7 solid; 
+    text-align: center;
+    color: black;
+    transition-duration: 0.3s;
+}
+#py:hover{
+    cursor: pointer;
+    background-color: #d6d6d6;
+}
+#normal{
+    color: white;
+    transition-duration: 0.3s;
+    background-color: rgb(17, 17, 17);
+    border: 2px white solid;
+    border-radius: 7px;
+    padding: 10px;
+}
+#normal:hover{
+    color: black;
+    cursor: pointer;
+    border: 2px white solid;
+    border-radius: 7px;
+    background-color: white;
+    padding: 10px;
+}
+#home{
+    width: 20%;
+    height: 20%;
+    transition-duration: 0.4s;
+}
+#home:hover{
+    cursor: pointer;
+    width: 20%;
+    height: 20%;
+    opacity: 90%;
+}
+p6{
+    font-family: monospace;
+    color: black;
+}
+.tab{
+    margin-left: 3%;
+}
+.tabP{
+    margin-left: 6%;
+}
+.white{
+    color: whitesmoke;
+}
+#pic35{
+    width: 35%;
+    height: 35%;
+}
+#pic65{
+    width: 65%;
+    height: 65%;
+}
+#pic30{
+    width: 30%;
+    height: 30%;
+}
+#pic85{
+    width: 85%;
+    height: 85%;
+}
+#pic45{
+    width: 45%;
+    height: 45%;
+}
+#pic37{
+    width: 37%;
+    height: 37%;
+}
+#pic33{
+    width: 33%;
+    height: 33%;
+}
+#pic25{
+    width: 25%;
+    height: 25%;
+}
+#pic55{
+    width: 55%;
+    height: 55%;
+}
+#pic75{
+    width: 75%;
+    height: 75%;
+}
+#pic50{
+    width: 50%;
+    height: 50%;
+}
+#email{
+    width: 4%;
+    height: 4%;
+}
+@media only screen and (max-device-width: 550px){
+    #home{
+        width: 45%;
+        height: auto;
+        transition-duration: 0.2s;
+    }
+    #home:hover{
+        cursor: pointer;
+        width: 45%;
+        height: auto;
+        opacity: 90%;
+    }
+    #pic25, #pic30, #pic33, #pic35, #pic37, #pic45, #pic50, #pic55, #pic65, #pic75, #pic85 {
+        width: 100%;
+        height: auto;
+    }
+    #email{
+        width: 8%;
+        height: auto;
+    }
+}
