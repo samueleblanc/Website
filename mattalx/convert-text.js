@@ -975,6 +975,7 @@ const mathDictionary = {
     "\\;" : "\\: \\:",  // Double space
     "\\colon" : "\u003A",
     "\\\\" : "\u000A",
+    "\\linebreak" : "\u000A",
     "\\tab" : "\u0009"
 };
 
@@ -1009,6 +1010,7 @@ const lettersSymbols = {
     "#" : "#",
     ":" : "\u2236",
     ";" : ";",
+    "…" : "…",
     "0" : "0",
     "1" : "1",
     "2" : "2",
@@ -1214,6 +1216,7 @@ const lettersChem = {
     "#" : "#",
     ":" : ":",  // Same as "\colon", use "\ratio" instead to get the same as without "$chem"
     ";" : ";",
+    "…" : "…",
     "0" : "0",
     "1" : "1",
     "2" : "2",
@@ -1446,11 +1449,11 @@ function closeSuggestions() {
 function semiAutoCompletion(textIn, cursorPosition, command) {
     let textOut = textIn;
     // Find end of word
-    while ((textIn.charAt(cursorPosition) !== " ") && (textIn.charAt(cursorPosition) !== "")) {
+    while ((textIn.charAt(cursorPosition) !== " ") && (textIn.charAt(cursorPosition) !== "") && (textIn.charAt(cursorPosition) !== "\u000A")) {
         cursorPosition += 1;
     };
     // Deletes word
-    while ((textIn.charAt(cursorPosition - 1) !== " ") && (textIn.charAt(cursorPosition - 1) !== "")) {
+    while ((textIn.charAt(cursorPosition - 1) !== " ") && (textIn.charAt(cursorPosition - 1) !== "") && (textIn.charAt(cursorPosition - 1) !== "\u000A")) {
         textOut = textOut.split("");
         textOut[cursorPosition] = "";
         textOut = textOut.join("");
