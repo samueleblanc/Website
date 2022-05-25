@@ -22,8 +22,8 @@
             conda install pip<br>
             pip install git+https://github.com/samueleblanc/SolvingRT.git<br><br>
         </div><br>
-        <a href="https://numpy.org/" target="_blank">Numpy</a>, <a href="https://matplotlib.org/" target="_blank">matplotlib</a>, <a href="https://opencv.org/" target="_blank">opencv</a> and <a href="https://google.github.io/mediapipe/" target="_blank">mediapipe</a> are also needed. 
-        They will be installed during the installation of SolvingRT if you don't already have them.
+        <a href="https://numpy.org/" target="_blank">Numpy</a>, <a href="https://opencv.org/" target="_blank">opencv</a> and <a href="https://google.github.io/mediapipe/" target="_blank">mediapipe</a> are also needed. 
+        They will be installed during the installation of SolvingRT if you don't already have them. <a href="https://matplotlib.org/" target="_blank">Matplotlib</a> is needed to draw the resistance profile graph.
         <br><br>
         <h2>Code structure</h2>
         <div class="code"><br>
@@ -44,17 +44,20 @@
             <dt>"time under tension"</dt>
             <dd>→ outputs the amount of time (s) spent under significant tension (at least 5% of the length of the limb is perpendicular to the force) for the whole set</dd>
             <dt>"angles"</dt>
-            <dd>→ outputs the smallest and biggest angle (°) attained in the whole set</dd>
+            <dd>→ outputs the smallest and biggest angle (°) attained in the whole set, and in each rep</dd>
             <dt>"velocity lost"</dt>
             <dd>→ outputs the percentage (%) of concentric velocity (rad/s) lost during the set</dd>
             <dt>"parallel"</dt>
             <dd>→ outputs True or False for each rep, depending if the person reached parallel or not (only available for squats)</dd>
             <dt>"tempo"</dt>
             <dd>→ outputs the amount of time (s) spent in the concentric or eccentric part of the movement for every rep (time while in stretched or shortened position not available)</dd>
+            <dt>"work"</dt>
+            <dd>→ outputs the work (J) for each rep</dd>
             <dt>"resistance profile"</dt>
             <dd>→ outputs a graph of the torque for every angle (during rep 2 and 3 since sometimes the first one has a little bit of setting-up)</dd>
         </dl><br>
         <h2>List of functions</h2>
+        N.B. Press escape at any moment to close the video.
         <div class="code">
             <span class="topcomment"><br>"""<br>
                 Methods available for the Athlete class<br><br>
