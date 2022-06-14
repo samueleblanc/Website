@@ -168,13 +168,24 @@ tr, td {
     background-color: lightgrey;
 }
 #chromeStore {
-    float: left;
+    display: block;
     margin-left: 8%;
     width: 20%;
     height: auto;
     transition-duration: 0.2s;
 }
 #chromeStore:hover {
+    background-color: whitesmoke;
+    border-radius: 8px;
+}
+#firefoxAddOns {
+    display: block;
+    margin-left: 8%;
+    width: 20%;
+    height: auto;
+    transition-duration: 0.2s;
+}
+#firefoxAddOns:hover {
     background-color: whitesmoke;
     border-radius: 8px;
 }
@@ -349,6 +360,9 @@ tr, td {
         background-color: lightgrey;
     }
     #chromeStore {
+        display: none;
+    }
+    #firefoxAddOns {
         display: none;
     }
 }

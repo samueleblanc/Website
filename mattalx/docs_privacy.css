@@ -8,25 +8,25 @@ body {
 #logo {
     width: 11%;
     height: 11%;
-    float: left;
+    display: block;
 }
-h1 {
+h1, h2, h3, h4 {
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: lighter;
 }
-#getmattalx {
+#getmattalxce, #getmattalxff {
     background-color: white;
     border: 1px solid gray;
     border-radius: 7px;
     color: black;
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 15px;
+    font-size: 16px;
     padding: 8px;
     transition-duration: 0.2s;
 }
-#getmattalx:hover {
+#getmattalxce:hover, #getmattalxff:hover {
     cursor: pointer;
     background-color: gainsboro;
     border: 1px solid gray;
@@ -34,7 +34,7 @@ h1 {
     color: black;
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 15px;
+    font-size: 16px;
     padding: 8px;
 }
 #promoVideo {
